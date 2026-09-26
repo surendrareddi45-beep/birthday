@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Shanmukh Babji 🎂</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle at 15% 15%, #ff8acb55, transparent 25%),
+        radial-gradient(circle at 85% 20%, #8e8cff55, transparent 25%),
+        radial-gradient(circle at 50% 100%, #ff5e9e33, transparent 35%),
+        linear-gradient(135deg, #12052b, #35105c, #791b62);
+}
+
+/* ---------------- BACKGROUND ---------------- */
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    color: white;
+    opacity: 0.7;
+    animation: twinkle 2s infinite alternate;
+}
+
+/* ---------------- MAIN CARD ---------------- */
+
+.card {
+    position: relative;
+    z-index: 10;
+
+    width: min(94%, 850px);
+    max-height: 94vh;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    overflow-y: auto;
+
+    background: rgba(255,255,255,0.10);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 32px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.45),
+        inset 0 1px rgba(255,255,255,0.2);
+
+    animation: cardAppear 1.2s ease;
+}
+
+.small-title {
+    color: #ffd0e9;
+    letter-spacing: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 8px 0;
+
+    font-size: clamp(40px, 8vw, 75px);
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #ffd1e9,
+            #ffe37e,
+            #ffffff
+        );
+
+    background-size: 250%;
+
+    color: transparent;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    animation: textShine 5s linear infinite;
+}
+
+.friend-name {
+    font-size: clamp(22px, 5vw, 36px);
+    font-weight: bold;
+
+    color: #ffd1e9;
+
+    text-shadow:
+        0 0 10px #ff79ba,
+        0 0 25px #ff79ba88;
+
+    animation: nameGlow 2s infinite alternate;
+}
+
+.message {
+    max-width: 680px;
+
+    margin: 15px auto;
+
+    color: #f9eafa;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+/* ---------------- CAKE ---------------- */
+
+.cake-area {
+    height: 285px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cake {
+    position: relative;
+
+    width: 300px;
+
+    animation: cakeFloat 3s ease-in-out infinite;
+}
+
+/* Cake plate */
+
+.plate {
+    width: 350px;
+    height: 25px;
+
+    margin-left: -25px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            #ead0ff,
+            #9255cf
+        );
+
+    box-shadow:
+        0 10px 25px #0008,
+        0 0 25px #d18cff55;
+}
+
+/* Cake layers */
+
+.layer {
+    position: relative;
+
+    height: 65px;
+
+    border-radius:
+        16px 16px
+        22px 22px;
+
+    box-shadow:
+        inset 0 -10px rgba(0,0,0,0.10),
+        0 8px 15px rgba(0,0,0,0.25);
+}
+
+/* Bottom */
+
+.bottom {
+    background:
+        linear-gradient(
+            135deg,
+            #ff306b,
+            #ff719f
+        );
+}
+
+/* Middle */
+
+.middle {
+    width: 91%;
+
+    margin: -5px auto;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff75ae,
+            #ffb1d0
+        );
+}
+
+/* Top */
+
+.top {
+    width: 80%;
+
+    height: 58px;
+
+    margin: -5px auto;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd1e5,
+            #ff91be
+        );
+}
+
+/* Cream */
+
+.cream {
+    position: absolute;
+
+    left: 35px;
+    right: 35px;
+
+    top: 63px;
+
+    height: 20px;
+
+    background: #fff9fd;
+
+    border-radius:
+        0 0 20px 20px;
+
+    box-shadow:
+        0 3px 8px #0002;
+}
+
+/* ---------------- NAME ON CAKE ---------------- */
+
+.cake-name {
+    position: absolute;
+
+    z-index: 4;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    bottom: 65px;
+
+    width: 220px;
+
+    padding: 7px 5px;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d71957,
+            #ef3973,
+            #d71957
+        );
+
+    border: 2px solid #ffd2e4;
+
+    box-shadow:
+        0 0 12px #ff4d91,
+        inset 0 2px #ffffff55;
+}
+
+/* ---------------- CANDLES ---------------- */
+
+.candles {
+    position: absolute;
+
+    z-index: 10;
+
+    top: -2px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 175px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+}
+
+.candle {
+    position: relative;
+
+    width: 22px;
+    height: 72px;
+
+    cursor: pointer;
+
+    border-radius:
+        7px 7px 4px 4px;
+
+    box-shadow:
+        inset 5px 0 rgba(255,255,255,0.35),
+        0 5px 10px #0004;
+
+    transition: transform 0.2s;
+}
+
+.candle:active {
+    transform: scale(0.9);
+}
+
+/* Candle colors */
+
+.candle:nth-child(1) {
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #36d7ff 0 9px,
+            #2375dd 9px 18px
+        );
+}
+
+.candle:nth-child(2) {
+    height: 85px;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #ffe45b 0 9px,
+            #ff8b32 9px 18px
+        );
+}
+
+.candle:nth-child(3) {
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #d69cff 0 9px,
+            #7c48d2 9px 18px
+        );
+}
+
+/* Candle wick */
+
+.candle::before {
+    content: "";
+
+    position: absolute;
+
+    top: -7px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 4px;
+    height: 9px;
+
+    background: #2b1830;
+
+    border-radius: 5px;
+}
+
+/* ---------------- BIG FLAME ---------------- */
+
+.flame {
+    position: absolute;
+
+    width: 30px;
+    height: 52px;
+
+    left: 50%;
+    top: -57px;
+
+    transform: translateX(-50%);
+
+    border-radius:
+        50% 50%
+        45% 45%
+        50% 50%;
+
+    background:
+        radial-gradient(
+            ellipse at center bottom,
+            #fffbd0 0 17%,
+            #ffe04d 28%,
+            #ff9e25 48%,
+            #ff4d25 67%,
+            transparent 70%
+        );
+
+    filter:
+        drop-shadow(0 0 8px #ffdd45)
+        drop-shadow(0 0 20px #ff6b32);
+
+    animation:
+        bigFlame 0.55s
+        infinite alternate;
+}
+
+/* Inner flame */
+
+.flame::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 3px;
+
+    transform: translateX(-50%);
+
+    width: 11px;
+    height: 23px;
+
+    border-radius: 50%;
+
+    background: #fffbd5;
+}
+
+/* OFF state */
+
+.flame.off {
+    display: none;
+}
+
+/* ---------------- INSTRUCTION ---------------- */
+
+.tap-text {
+    margin-top: -5px;
+
+    color: #ffd8ea;
+
+    font-size: 13px;
+
+    animation: pulse 2s infinite;
+}
+
+/* ---------------- HELICOPTER ---------------- */
+
+.helicopter {
+    position: fixed;
+
+    z-index: 3;
+
+    left: -180px;
+
+    font-size: 55px;
+
+    filter:
+        drop-shadow(0 5px 5px #0005);
+
+    animation:
+        flyAcross 13s linear infinite;
+}
+
+.helicopter.two {
+    top: 25%;
+
+    animation-delay: 5s;
+
+    font-size: 45px;
+}
+
+.helicopter.one {
+    top: 12%;
+}
+
+/* Helicopter rotor */
+
+.rotor {
+    position: absolute;
+
+    width: 80px;
+    height: 4px;
+
+    background: #ddd;
+
+    top: -5px;
+    left: -5px;
+
+    border-radius: 10px;
+
+    transform-origin: center;
+
+    animation: rotorSpin 0.15s linear infinite;
+}
+
+/* ---------------- FLOWERS ---------------- */
+
+.flower {
+    position: fixed;
+
+    z-index: 4;
+
+    top: 17%;
+
+    font-size: 25px;
+
+    animation:
+        flowerFall 5s linear forwards;
+
+    pointer-events: none;
+}
+
+/* ---------------- CONFETTI ---------------- */
+
+.confetti {
+    position: fixed;
+
+    z-index: 1;
+
+    top: -20px;
+
+    font-size: 18px;
+
+    animation:
+        confettiFall linear forwards;
+}
+
+/* ---------------- BUTTON ---------------- */
+
+.music-note {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 9px 18px;
+
+    border-radius: 25px;
+
+    background: #ffffff12;
+
+    border: 1px solid #ffffff30;
+
+    color: #ffe2ef;
+
+    font-size: 13px;
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes textShine {
+
+    to {
+        background-position: 250%;
+    }
+}
+
+@keyframes nameGlow {
+
+    from {
+        text-shadow:
+            0 0 8px #ff79ba;
+    }
+
+    to {
+        text-shadow:
+            0 0 10px #fff,
+            0 0 30px #ff79ba,
+            0 0 50px #ff79ba;
+    }
+}
+
+@keyframes cakeFloat {
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes bigFlame {
+
+    from {
+        transform:
+            translateX(-50%)
+            scale(0.9)
+            rotate(-4deg);
+    }
+
+    to {
+        transform:
+            translateX(-50%)
+            scale(1.15)
+            rotate(4deg);
+    }
+}
+
+@keyframes pulse {
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes twinkle {
+
+    from {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes flyAcross {
+
+    0% {
+        transform:
+            translateX(-180px)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateX(55vw)
+            translateY(-25px);
+    }
+
+    100% {
+        transform:
+            translateX(calc(100vw + 180px))
+            translateY(10px);
+    }
+}
+
+@keyframes rotorSpin {
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flowerFall {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(75vh)
+            rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes confettiFall {
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 600px) {
+
+    .card {
+        width: 94%;
+        padding: 25px 15px;
+        max-height: 92vh;
+    }
+
+    .message {
+        font-size: 14px;
+    }
+
+    .cake {
+        transform: scale(0.82);
+        transform-origin: bottom;
+    }
+
+    .cake-area {
+        height: 250px;
+    }
+
+    .helicopter {
+        font-size: 40px;
+    }
+
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- Background stars -->
+
+<div class="stars" id="stars"></div>
+
+
+<!-- Flying helicopters -->
+
+<div class="helicopter one">
+    <div class="rotor"></div>
+    🚁
+</div>
+
+<div class="helicopter two">
+    <div class="rotor"></div>
+    🚁
+</div>
+
+
+<!-- Main birthday card -->
+
+<div class="card">
+
+    <div class="small-title">
+        A Special Wish For A Special Friend
+    </div>
+
+    <h1>
+        Happy Birthday 🎉
+    </h1>
+
+    <div class="friend-name">
+        SHANMUKH BABJI ❤️
+    </div>
+
+
+    <p class="message">
+
+        From the beautiful memories of childhood
+        to all the moments we share today,
+        I'm truly lucky to have a friend like you.
+
+        <br><br>
+
+        May your life always be filled with
+        <b>
+            happiness, success, good health,
+            laughter and unforgettable memories.
+        </b>
+
+        <br><br>
+
+        Childhood friendships are special because
+        they grow with us and become memories
+        that we carry forever.
+
+        <br><br>
+
+        No matter where life takes us,
+        I hope our friendship always stays
+        as special as it is today.
+
+        <br><br>
+
+        <b>
+            Happy Birthday, Shanmukh Babji! 🥳❤️
+        </b>
+
+        <br>
+
+        Keep smiling, keep shining,
+        and keep being the wonderful person you are! ✨
+
+    </p>
+
+
+    <!-- CAKE -->
+
+    <div class="cake-area">
+
+        <div class="cake">
+
+
+            <!-- Candles -->
+
+            <div class="candles">
+
+                <div class="candle"
+                     onclick="toggleFlame(this)">
+                    <span class="flame"></span>
+                </div>
+
+                <div class="candle"
+                     onclick="toggleFlame(this)">
+                    <span class="flame"></span>
+                </div>
+
+                <div class="candle"
+                     onclick="toggleFlame(this)">
+                    <span class="flame"></span>
+                </div>
+
+            </div>
+
+
+            <!-- Cake layers -->
+
+            <div class="layer bottom"></div>
+
+            <div class="layer middle"></div>
+
+            <div class="layer top"></div>
+
+
+            <!-- Cream -->
+
+            <div class="cream"></div>
+
+
+            <!-- Name written on cake -->
+
+            <div class="cake-name">
+                SHANMUKH BABJI
+            </div>
+
+
+            <!-- Plate -->
+
+            <div class="plate"></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="tap-text">
+        👆 Tap the candles to turn the flames ON / OFF
+    </div>
+
+
+    <div class="music-note">
+        🌸 🚁 Flowers are flying for your birthday! 🚁 🌸
+    </div>
+
+</div>
+
+
+<script>
+
+/* ----------------------------------
+   TOGGLE CANDLE FLAME
+---------------------------------- */
+
+function toggleFlame(candle) {
+
+    const flame =
+        candle.querySelector(".flame");
+
+    flame.classList.toggle("off");
+
+    createSparkles(candle);
+
+}
+
+
+/* ----------------------------------
+   SMALL SPARKLES WHEN CANDLE TAPPED
+---------------------------------- */
+
+function createSparkles(candle) {
+
+    for (let i = 0; i < 8; i++) {
+
+        const sparkle =
+            document.createElement("div");
+
+        sparkle.innerHTML = "✨";
+
+        sparkle.style.position = "fixed";
+
+        sparkle.style.left =
+            (candle.getBoundingClientRect().left +
+            Math.random() * 30) + "px";
+
+        sparkle.style.top =
+            (candle.getBoundingClientRect().top -
+            20) + "px";
+
+        sparkle.style.zIndex = "30";
+
+        sparkle.style.pointerEvents = "none";
+
+        sparkle.style.transition =
+            "all 0.8s ease";
+
+        document.body.appendChild(sparkle);
+
+        setTimeout(() => {
+
+            sparkle.style.transform =
+                "translateY(-60px) scale(0)";
+
+            sparkle.style.opacity = "0";
+
+        }, 50);
+
+        setTimeout(() => {
+
+            sparkle.remove();
+
+        }, 900);
+    }
+}
+
+
+/* ----------------------------------
+   BACKGROUND STARS
+---------------------------------- */
+
+const starContainer =
+    document.getElementById("stars");
+
+for (let i = 0; i < 35; i++) {
+
+    const star =
+        document.createElement("span");
+
+    star.className = "star";
+
+    star.innerHTML =
+        Math.random() > 0.5 ? "✦" : "•";
+
+    star.style.left =
+        Math.random() * 100 + "%";
+
+    star.style.top =
+        Math.random() * 100 + "%";
+
+    star.style.fontSize =
+        (8 + Math.random() * 15) + "px";
+
+    star.style.animationDelay =
+        Math.random() * 3 + "s";
+
+    starContainer.appendChild(star);
+}
+
+
+/* ----------------------------------
+   FLOWERS FROM HELICOPTERS
+---------------------------------- */
+
+function dropFlower() {
+
+    const flower =
+        document.createElement("div");
+
+    flower.className = "flower";
+
+    const flowers = [
+        "🌸",
+        "🌺",
+        "🌼",
+        "🌷",
+        "💮"
+    ];
+
+    flower.innerHTML =
+        flowers[
+            Math.floor(
+                Math.random() * flowers.length
+            )
+        ];
+
+    flower.style.left =
+        Math.random() * 100 + "vw";
+
+    flower.style.fontSize =
+        (18 + Math.random() * 18) + "px";
+
+    flower.style.animationDuration =
+        (3 + Math.random() * 3) + "s";
+
+    document.body.appendChild(flower);
+
+    setTimeout(() => {
+        flower.remove();
+    }, 6000);
+}
+
+
+/* Flowers continuously fall */
+
+setInterval(dropFlower, 700);
+
+
+/* ----------------------------------
+   CONFETTI
+---------------------------------- */
+
+function createConfetti() {
+
+    const confetti =
+        document.createElement("div");
+
+    confetti.className = "confetti";
+
+    const pieces = [
+        "🎉",
+        "✨",
+        "💖",
+        "⭐",
+        "🌸",
+        "💜"
+    ];
+
+    confetti.innerHTML =
+        pieces[
+            Math.floor(
+                Math.random() * pieces.length
+            )
+        ];
+
+    confetti.style.left =
+        Math.random() * 100 + "vw";
+
+    confetti.style.fontSize =
+        (12 + Math.random() * 18) + "px";
+
+    confetti.style.animationDuration =
+        (4 + Math.random() * 5) + "s";
+
+    document.body.appendChild(confetti);
+
+    setTimeout(() => {
+        confetti.remove();
+    }, 9000);
+}
+
+
+/* Continuous celebration */
+
+setInterval(createConfetti, 350);
+
+</script>
+
+</body>
+</html>
